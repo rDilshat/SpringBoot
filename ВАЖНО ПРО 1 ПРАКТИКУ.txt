@@ -1,0 +1,1 @@
+Созданные классы для защиты — это ScheduleController и ScheduleService
