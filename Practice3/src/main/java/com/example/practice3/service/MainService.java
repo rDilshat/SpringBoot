@@ -13,12 +13,11 @@ public class MainService {
         this.featureService = featureService;
     }
 
-    public void run() {
-
+    public String getMessage() {
         if (featureService.isPresent()) {
-            System.out.println(featureService.get().getMessage());
-        } else {
-            System.out.println("Conditional feature is disabled!");
+            return featureService.get().getMessage();
         }
+
+        return "Conditional feature is disabled!";
     }
 }
