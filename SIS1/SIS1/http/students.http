@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:8080/api/v1/students
+
+### Create a student
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "studentId": "S-1001",
+  "firstName": "Dilshat",
+  "lastName": "Amanov"
+}
+
+### Get all students
+GET {{baseUrl}}
+
+### Get a student by ID
+GET {{baseUrl}}/S-1001
+
+### Update a student
+PUT {{baseUrl}}/S-1001
+Content-Type: application/json
+
+{
+  "firstName": "Dils",
+  "lastName": "Amanov"
+}
+
+### Delete a student
+DELETE {{baseUrl}}/S-1001
+
+### Validation error example
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "studentId": "",
+  "firstName": "",
+  "lastName": ""
+}

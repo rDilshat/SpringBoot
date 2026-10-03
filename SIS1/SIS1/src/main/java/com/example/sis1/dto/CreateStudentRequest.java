@@ -1,0 +1,19 @@
+package com.example.sis1.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public record CreateStudentRequest(
+        @NotBlank(message = "Student ID is required")
+        @Size(max = 20, message = "Student ID must be at most 20 characters")
+        String studentId,
+
+        @NotBlank(message = "First name is required")
+        @Size(max = 50, message = "First name must be at most 50 characters")
+        String firstName,
+
+        @NotBlank(message = "Last name is required")
+        @Size(max = 50, message = "Last name must be at most 50 characters")
+        String lastName
+) {
+}
